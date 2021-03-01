@@ -64,7 +64,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.dataForm.bookCode = data.bookReadLog.bookCode
                 this.dataForm.userId = data.bookReadLog.userId
                 this.dataForm.logNum = data.bookReadLog.logNum
@@ -89,7 +89,7 @@
                 'readed': this.dataForm.readed
               })
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.$message({
                   message: '操作成功',
                   type: 'success',

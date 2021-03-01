@@ -64,7 +64,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.dataForm.catalog = data.bookCatalog.catalog
                 this.dataForm.bookCode = data.bookCatalog.bookCode
                 this.dataForm.catalogCode = data.bookCatalog.catalogCode
@@ -89,7 +89,7 @@
                 'orders': this.dataForm.orders
               })
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.$message({
                   message: '操作成功',
                   type: 'success',

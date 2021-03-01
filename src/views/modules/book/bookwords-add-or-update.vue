@@ -64,7 +64,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.dataForm.bookCode = data.bookWords.bookCode
                 this.dataForm.contentId = data.bookWords.contentId
                 this.dataForm.userId = data.bookWords.userId
@@ -89,7 +89,7 @@
                 'content': this.dataForm.content
               })
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.$message({
                   message: '操作成功',
                   type: 'success',

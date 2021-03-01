@@ -64,7 +64,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.dataForm.authorName = data.bookAuthor.authorName
                 this.dataForm.authorNameEnglish = data.bookAuthor.authorNameEnglish
                 this.dataForm.authorCode = data.bookAuthor.authorCode
@@ -89,7 +89,7 @@
                 'comment': this.dataForm.comment
               })
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.$message({
                   message: '操作成功',
                   type: 'success',

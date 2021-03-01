@@ -77,7 +77,7 @@
               method: 'get',
               params: this.$http.adornParams()
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.dataForm.bookName = data.book.bookName
                 this.dataForm.bookCode = data.book.bookCode
                 this.dataForm.authorCode = data.book.authorCode
@@ -93,7 +93,7 @@
                 method: 'get',
                 params: this.$http.adornParams()
               }).then(({data}) => {
-                this.authorlist = data && data.code === 0 ? data.list : []
+                this.authorlist = data && data.code === 200 ? data.list : []
               })
             )
           }
@@ -117,7 +117,7 @@
                 'startContent': this.dataForm.startContent
               })
             }).then(({data}) => {
-              if (data && data.code === 0) {
+              if (data && data.code === 200) {
                 this.$message({
                   message: '操作成功',
                   type: 'success',
