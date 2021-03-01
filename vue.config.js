@@ -4,7 +4,7 @@ module.exports = {
 		// 后端请求转发，此配置仅开发环境有效，生产环境请参考生产环境部署文档配置nginx转发
 		proxy: {
 			'/will': {
-				target: 'http://localhost:8088/'
+				target: 'http://localhost:8080/'
 			}
 		},
 		port:8001,
