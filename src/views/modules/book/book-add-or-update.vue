@@ -87,16 +87,14 @@
                 this.dataForm.endContent = data.book.endContent
               }
             })
-            .then(
-              this.$http({
-                url: this.$http.adornUrl('/book/bookauthor/select'),
-                method: 'get',
-                params: this.$http.adornParams()
-              }).then(({data}) => {
-                this.authorlist = data && data.code === 200 ? data.list : []
-              })
-            )
           }
+        }),
+        this.$http({
+          url: this.$http.adornUrl('/book/bookauthor/select'),
+          method: 'get',
+          params: this.$http.adornParams()
+        }).then(({data}) => {
+          this.authorlist = data && data.code === 200 ? data.list : []
         })
       },
       // 表单提交

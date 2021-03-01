@@ -39,16 +39,17 @@
         dataRule: {
           authorName: [
             { required: true, message: '作者名称不能为空', trigger: 'blur' }
-          ],
-          authorNameEnglish: [
-            { required: true, message: '作者英文名不能为空', trigger: 'blur' }
-          ],
+          ]
+          // ,
+          // authorNameEnglish: [
+          //   { required: true, message: '作者英文名不能为空', trigger: 'blur' }
+          // ],
           // authorCode: [
           //   { required: true, message: '作者code不能为空', trigger: 'blur' }
           // ],
-          comment: [
-            { required: true, message: '描述不能为空', trigger: 'blur' }
-          ]
+          // comment: [
+          //   { required: true, message: '描述不能为空', trigger: 'blur' }
+          // ]
         }
       }
     },
